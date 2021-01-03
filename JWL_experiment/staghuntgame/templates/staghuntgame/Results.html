@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    게임 결과
+{% endblock %}
+
+<style>
+    .otree-body { text-align: center }
+    .center { margin-left : auto
+              margin-right : auto }
+    .otree-timer {
+            display: none;
+            }
+</style>
+{% block content %}
+    <style>
+          table, td { border : 1px solid black;
+                    text-align : center;
+                    padding : 15px; }
+          tr { border : 2px solid black; }
+          .otree-timer { display: none ; }
+    </style>
+    <table class="center">
+        <tr>
+            <td> 당신의 선택 </td>
+            <td> 파트너의 선택 </td>
+        </tr>
+        <tr>
+            <td> {{a}} </td>
+            <td> 사슴 </td>
+        </tr>
+    </table>
+
+    이번 라운드에서는 {{b}} 포인트 획득하셨습니다.
+    <br>
+    아래 버튼을 눌러 다음 라운드로 넘어가시길 바랍니다.
+    <br>
+    {% next_button %}
+{% endblock %}
+

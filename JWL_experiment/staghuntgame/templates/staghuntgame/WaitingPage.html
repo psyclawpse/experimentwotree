@@ -1,0 +1,44 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block content %}
+   <style>
+       .otree-body { text-align : center;}
+       .otree-btn-next {
+            display: none;
+            }
+       .otree-timer {
+            display: none;
+            }
+    </style>
+    <br>
+    <br>
+    <h1>
+        다음 라운드로 넘어갑니다.
+    </h1>
+    <br>
+    <br>
+    <br>
+    <p1>
+        다음 라운드로 넘어갑니다.
+        <br>
+        이전 라운드와 다른 조원과 함께 플레이합니다.
+    </p1>
+        <br>
+
+    <script>
+        $(function () {
+            $('.otree-timer__time-left').on('update.countdown', function (event) {
+                if (event.offset.totalSeconds === 1) {
+                    $('.otree-btn-next').show();
+                }
+            });
+        });
+    </script>
+
+    <button class="otree-btn-next btn btn-primary">
+        다음으로
+    </button>
+{% endblock %}
+
+

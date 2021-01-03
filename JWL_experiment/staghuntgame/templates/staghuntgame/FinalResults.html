@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block content %}
+    <style>
+        h1 { text-align: center;}
+        p1 { text-align: center;}
+    </style>
+    <h1>
+        모든 시행이 끝났습니다.
+    </h1>
+    <br>
+    <br>
+    <br>
+    <p1>
+        시행 중 총 <b>{{ a }}</b>를 획득하셨기 때문에
+        <br>
+        <br>
+        <b>1000.0 원</b>을 획득하셨습니다.
+        <br>
+        <br>
+        공공재 게임에서 얻은 금액과 합쳐서 지급하겠습니다.
+        <br>
+        <br>
+    </p1>
+{% endblock %}
+

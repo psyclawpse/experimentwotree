@@ -1,0 +1,44 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block content %}
+   <style>
+       .otree-body { text-align : center;}
+       .otree-btn-next {
+            display: none;
+            }
+       .otree-timer {
+            display: none;
+            }
+    </style>
+    <br>
+    <br>
+    <h1>
+        결과 페이지로 넘어갑니다.
+    </h1>
+    <br>
+    <br>
+    <br>
+    <p1>
+        아직 데이터를 수합하는 중입니다.
+        <br>
+        오래 걸리지 않을 테니 기다려 주시길 바랍니다.
+    </p1>
+        <br>
+
+    <script>
+        $(function () {
+            $('.otree-timer__time-left').on('update.countdown', function (event) {
+                if (event.offset.totalSeconds === 1) {
+                    $('.otree-btn-next').show();
+                }
+            });
+        });
+    </script>
+
+    <button class="otree-btn-next btn btn-primary">
+        다음으로
+    </button>
+{% endblock %}
+
+

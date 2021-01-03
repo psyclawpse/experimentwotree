@@ -1,0 +1,51 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    처벌 페이지
+{% endblock %}
+
+{% block content %}
+    <style>
+        table, th, td {
+            border: 1px solid #bcbcbc;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+
+    <table>
+        <tr>
+            <td> 당신의 기여 정도 </td>
+            <td> Player 2의 기여 정도 </td>
+            <td> Player 3의 기여 정도 </td>
+            <td> Player 4의 기여 정도</td>
+        </tr>
+        <tr>
+          <td> {{ a }} </td>
+            <td> {{ b }}</td>
+            <td> {{ c }} </td>
+            <td> {{ d }} </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    위에는 당신과 당신의 조원들이 각각 그룹에 기여한 정도를 표시한 표입니다.
+    <br>
+    당신은 조원을 처벌하시겠습니까? 그렇다면, 어느 정도로 처벌하시겠습니까?
+    <br>
+    단, 이번에는 'Player 2'를 '3'만큼 처벌해주십시오. 포인트 차감은 되지 않습니다.
+    <br>
+    <br>
+
+    {% formfield player.Retaliation_player %}
+    <br>
+    <br>
+    {% formfield player.Retaliation_amount %}
+    <br>
+    <br>
+
+    {% next_button %}
+
+{% endblock %}

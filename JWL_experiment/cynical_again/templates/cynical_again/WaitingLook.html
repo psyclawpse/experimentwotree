@@ -1,0 +1,43 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block content %}
+    <style>
+       h1 { text-align : center;}
+       .otree-body { text-align : center;}
+       .otree-btn-next {
+            display: none;
+            }
+       .otree-timer {
+            display: none;
+            }
+    </style>
+    <br>
+    <br>
+    <h1>
+        대기 페이지
+    </h1>
+    <br>
+    <br>
+    <br>
+    <p1>
+        아직 선택을 끝내지 않은 조원들이 있습니다. 기다려주십시오.
+        <br>
+    </p1>
+        <br>
+
+    <script>
+        $(function () {
+            $('.otree-timer__time-left').on('update.countdown', function (event) {
+                if (event.offset.totalSeconds === 3) {
+                    $('.otree-btn-next').show();
+                }
+            });
+        });
+    </script>
+
+    <button class="otree-btn-next btn btn-primary">
+        다음으로
+    </button>
+{% endblock %}

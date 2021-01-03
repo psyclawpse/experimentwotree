@@ -1,0 +1,56 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    사슴 사냥 게임
+{% endblock %}
+
+<style>
+    .otree-body {text-align : center; }
+    .wrapper {text-align:center;
+              display:flex;}
+    .button { width:150px;
+              text-align:center;
+              margin:0 auto;
+              }
+</style>
+{% block content %}
+    <style>
+        table, td { border : 1px solid black;
+                    text-align : center;
+                    padding : 15px; }
+        tr { border : 2px solid black; }
+        tr:hover { background-color: #F5F5F5; }
+        img:hover { background-color: #F5F5F5; }
+        .center{ margin-left: auto;
+                margin-right: auto;}
+    </style>
+    <br>
+    <table class = "center">
+        <tr>
+            <td>  </td>
+            <td>타인이 <b>사슴을</b> 선택</td>
+            <td>타인이 <b>토끼를</b> 선택</td>
+        </tr>
+        <tr>
+            <td>당신이 <b>사슴을</b> 선택</td>
+            <td>모두 <b>{{a}}포인트</b> 획득</td>
+            <td>당신은 <b>{{b}}포인트</b> 획득</td>
+        </tr>
+        <tr>
+            <td>당신이 <b>토끼를</b> 선택</td>
+            <td>당신은<b>{{c}}포인트</b> 획득</td>
+            <td>모두 <b>{{d}}포인트</b> 획득</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+       <p style = "text-align:center;"> 어느 동물을 사냥하시겠습니까?</p>
+        <div class="wrapper" style = "text-align:center;">
+            <button class="button" name="Truth" value="True" style="display:inline-block">
+                <img src = "{% static 'deer.png' %}" style="width:150px;text-align:center;"></button>
+            <button name="Truth" value="False" style="display:inline-block">
+                <img src = "{% static 'rabbit.png' %}" style = "width:150px;text-align:center;"></button>
+        </div>
+    {% endblock %}

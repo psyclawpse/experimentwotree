@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block content %}
+    <style>
+        h1 { text-align: center;}
+        p1 { text-align: center;}
+    </style>
+    <h1>
+        모든 시행이 끝났습니다.
+    </h1>
+    <br>
+    <br>
+    <br>
+    <p1>
+        시행 중 총 <b>{{ a }}</b>를 획득하셨기 때문에, 기본 실험 참가비 5000원과 함께
+        <br>
+        <br>
+        <b>{{ player.truncate }} 원</b> 상당의 기프티콘은 추후에 지급하도록 하겠습니다.
+        <br>
+        <br>
+    </p1>
+    {% next_button %}
+{% endblock %}
+
+

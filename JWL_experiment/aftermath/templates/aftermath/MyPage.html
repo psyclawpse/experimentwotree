@@ -1,0 +1,63 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    수고하셨습니다.
+{% endblock %}
+
+{% block content %}
+    <style>
+        input[type=range] {
+        width: 75%;
+        }
+    </style>
+    하단의 설문까지 마무리해주셔야 실험이 종료됩니다.
+    <br>
+    <br>
+    {% formfield player.Age %}
+    <br>
+    <br>
+    {% formfield player.Gender %}
+    <br>
+    <br>
+    {% formfield player.Major %}
+    <br>
+    <br>
+    {% formfield player.Year %}
+    <br>
+    <br>
+    {% formfield player.Undergrad %}
+    <br>
+    <br>
+    다음에 대해 어떻게 생각하십니까?
+    <br>
+    (1= "열심히 일하면 결국 잘 살게 된다", 10 = "열심히 일하는 것보다 운과 배경이 좋아야 성공한다")
+    {% formfield player.InequityAversion1 with label = "" %}
+    <br>
+    <br>
+    다음에 대해 어떻게 생각하십니까?
+    <br>
+    (1= "소득이 더 공평해야 한다", 10 = "노력하는 만큼 소득에 차이가 나야 한다")
+    <br>
+    {% formfield player.InequityAversion2 with label = "" %}
+    <br>
+    <br>
+    다음에 대해 어떻게 생각하십니까?
+    <br>
+    (1= "정부가 복지에 더 책임을 져야 한다", 10 = "당사자가 각자의 생계에 책임을 져야 한다")
+    <br>
+    {% formfield player.InequityAversion3 with label = ""%}
+    <br>
+    <br>
+    {% formfield player.SubjectiveSES %}
+    <br>
+    <br>
+    {% formfield player.Explanation %}
+    <br>
+    <br>
+    {% formfield player.ExplanationT %}
+    <br>
+    <br>
+    {% next_button %}
+
+{% endblock %}

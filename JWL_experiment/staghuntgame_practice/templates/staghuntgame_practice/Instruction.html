@@ -1,0 +1,51 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <style>
+        .otree-head {text-align: center;
+        font-weight : bold;}
+    </style>
+    실험 설명
+{% endblock %}
+
+{% block content %}
+    <style>
+        font-size : xx-large;
+        }
+        h2 { text - align : left;
+            font - size : large;
+            color : #3f3f3f}
+        h3 { text - align : left;
+            font - size : small;
+            color : #545454}
+        p1 { text-align : left; }
+        p2 { text-align : left
+            font-size : medium }
+
+    </style>
+    <br>
+    <br>
+    <h2>
+        사냥 게임이란?
+    </h2>
+         지금부터 사냥 게임을 시작하도록 하겠습니다.
+        <br>
+        당신은 다른 사냥꾼과 함께 사냥하는 중입니다. 당신에게 주어진 선택지는 두 가지, <b>사슴과 토끼<b>입니다.
+        <br>
+        사슴은 토끼보다 가치가 높은 사냥감이며 다른 사냥꾼과 협력해야 잡을 수 있습니다.
+        <br>
+        토끼는 사슴보다 가치가 낮지만 협력하지 않아도 잡을 수 있으며 당신은 사슴과 토끼 중에 한 동물만 사냥할 수 있습니다.
+        <br>
+        예시화면은 다음과 같습니다.
+        <br>
+        <img src = "{% static 'screenshot.png' %}" style="width:600px;text-align:center;">
+        <br>
+        1번의 연습시행과 5번의 실시행, 총 6번의 사냥 게임을 하게 되며 사슴과 토끼의 가치는 각 사냥마다 달라집니다.
+    <br>
+    <br>
+    이 페이지는 30초 표시되며, 30초가 지난 후에는 1회의 연습시행으로 넘어갑니다.
+    <br>
+    <br>
+
+{% endblock %}

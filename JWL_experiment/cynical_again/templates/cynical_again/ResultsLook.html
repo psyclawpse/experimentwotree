@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    다음 시행으로 넘어가기 전
+{% endblock %}
+
+{% block content %}
+        <style>
+            .otree-timer {
+            display: none;
+            }
+        </style>
+        다음 시행으로 넘어가기 전에 당신이 이번 시행에서 기여한 정도는 {{a}}이고,
+        <br>
+        처벌을 하는 데에는 {{c}} 포인트를 사용하셨습니다.
+        <br>
+        이번 시행은 피험자의 집중력을 테스트하기 위한 것으로, 최종 포인트에는 <b>아무런 영향을 미치지 않습니다<b>.
+{% endblock %}
+

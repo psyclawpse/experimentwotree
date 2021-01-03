@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    다음 시행으로 넘어가기 전
+{% endblock %}
+
+{% block content %}
+        <style>
+            .otree-timer {
+            display: none;
+            }
+        </style>
+        다음 시행으로 넘어가기 전에 당신이 이번 시행에서 기여한 정도는 <b>{{a}}</b>이고,
+        <br>
+        이로 인해 당신이 이번 시행으로 얻은 포인트는 <b>{{b}}</b>입니다.
+        <br>
+        처벌을 하는 데에는 <b>{{c}} 포인트</b>를 사용하셨습니다.
+        <br>
+        다른 조원의 처벌로 인해 차감된 포인트는 <b>{{e}} 포인트</b>이므로, 최종적으로 <b>{{d}}</b>를 얻으셨습니다.
+{% endblock %}
+

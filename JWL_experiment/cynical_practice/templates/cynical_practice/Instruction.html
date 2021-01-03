@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+연습시행 시작
+{% endblock %}
+
+{% block content %}
+    <style>
+        .otree-timer {
+            display:none;
+            }
+        .otree-body { text-align : center; }
+    </style>
+
+    이제 연습시행을 시작하겠습니다.
+    <br>
+    <br>
+    먼저 연습시행 5번을 진행한 뒤 본시행 10번을 진행하게 될 것입니다.
+    <br>
+    <br>
+    기여 페이지는 <b> 10초만 </b> 보여드리므로 집중해주시길 바랍니다.
+    <br>
+    <br>
+    본 페이지는 5초 뒤에 자동적으로 다음 페이지로 넘어갈 것입니다.
+
+{% endblock %}

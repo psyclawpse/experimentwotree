@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+당신은 얼마를 제공하시겠습니까?
+{% endblock %}
+
+{% block content %}
+    <br>
+    아래에 '53'을 기입해주십시오.
+    <br>
+    <br>
+
+    {% formfield player.contribution with label = "" %}
+
+    {% next_button %}
+
+{% endblock %}

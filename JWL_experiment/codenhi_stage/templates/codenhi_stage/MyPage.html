@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    인삿말
+{% endblock %}
+
+{% block content %}
+    안녕하세요. 실험에 참가해주셔서 감사합니다.
+    <br>
+    본 실험은 PC로 진행되며, <b>다른 참가자와 함께 실험을 진행하므로 “뒤로가기”를 절대 누르지 말아주시기 바랍니다.</b>
+    <br>
+    먼저 주어진 참여자 코드를 입력해주세요 :
+
+    {% formfield player.code %}
+    <br>
+    참여자 분께서는 <b>'사슴사냥게임'과 ‘공공재게임’에 참여하여 다른 조원들과 함께 실험을 진행하게 됩니다.</b>
+    <br>
+    다음페이지에서 사슴사냥게임에 대한 자세한 설명을 해드리겠습니다.
+    <br>
+    {% next_button %}
+
+{% endblock %}

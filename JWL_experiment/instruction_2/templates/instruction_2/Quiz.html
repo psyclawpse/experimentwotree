@@ -1,0 +1,40 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+   이해도 퀴즈
+{% endblock %}
+
+{% block content %}
+    <page>
+        <p1>
+            Q1. 기여 금액을 정하는 시간은 10초이며, 처벌은 모두가 결정을 완료한 다음 모두가 결정을 완료했을 때 다음 페이지로 넘어간다.
+            <br>
+            {% formfield player.ox1 with label = "" %}
+        </p1>
+        <p2>
+            Q2. 한 라운드에서 가장 많이 기여한 플레이어는 치킨 기프티콘 추첨권을 하나 받는다.
+            <br>
+            {% formfield player.ox2 with label = "" %}
+        </p2>
+        <p3>
+            Q3. 다른 사람이 현재 갖고 있는 금액을 볼 수 있다.
+            <br>
+            {% formfield player.ox3 with label = "" %}
+        </p3>
+        <p4>
+            Q4. 본인과 관련된 처벌 외에 타인이 결정한 처벌 대상, 처벌 정도는 알 수 없다.
+            <br>
+            {% formfield player.ox4 with label = "" %}
+        </p4>
+        <p5>
+            Q5. 4명의 플레이어가 모두 100씩 제공했을 때, 한 개인이 가져가는 금액은 얼마인가?
+            <br>
+            (단, 모든 금액은 소수점 첫째자리에서 반올림한다.)
+            <br>
+            {% formfield player.money1 with label = "" %}
+        </p5>
+    </page>
+    {% next_button %}
+
+{% endblock %}

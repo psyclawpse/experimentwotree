@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block content %}
+    <style>
+        h1 { text-align : center;
+            font-weight : bold;}
+        .otree-timer {
+            display:none;
+            }
+        .otree-body { text-align : center; }
+    </style>
+
+    <h1>
+        경고! 다음 버튼을 꼭 눌러주십시오!
+    </h1>
+    <br>
+    <br>
+    당신은 이번에 다음버튼을 누르지 않았습니다.
+    <br>
+    다음부터는 꼭 눌러주시기를 바라겠습니다.
+
+    {% next_button %}
+
+{% endblock %}

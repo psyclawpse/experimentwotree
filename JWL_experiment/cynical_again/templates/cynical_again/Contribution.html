@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+당신은 얼마를 제공하시겠습니까?
+{% endblock %}
+
+{% block content %}
+    <br>
+    당신이 그룹에 기여할 정도를 정해주십시오.
+    <br>
+    <br>
+
+    {% formfield player.contribution with label = "" %}
+
+    {% next_button %}
+
+{% endblock %}

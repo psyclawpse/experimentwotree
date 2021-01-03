@@ -1,0 +1,49 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block content %}
+    <style>
+        h1 {
+            text-align: center;
+            }
+        table, th, td {
+            border: 1px solid #bcbcbc;
+            margin: auto;
+            text-align: center;
+        }
+         p2 {
+            font-size : 35px;
+        }
+    </style>
+        <h1>
+            실험 예시
+        </h1>
+        <br>
+        <br>
+        <table>
+        <tr>
+            <td> 당신의 기여 정도 </td>
+            <td> Player 2의 기여 정도 </td>
+            <td> Player 3의 기여 정도 </td>
+            <td> Player 4의 기여 정도</td>
+        </tr>
+        <tr>
+          <td> 100 </td>
+            <td> 100 </td>
+            <td> 100 </td>
+            <td> 100 </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <p2>
+       100 - 100 + (100+100+100+100) * 1.6 / 4 = 160
+    </p2>
+    <br>
+    <br>
+    이와 같이 제공할 시, 당신은 이 시행에서 총 160포인트를 얻는 것입니다.
+    <br>
+    <br>
+    {% next_button %}
+
+{% endblock %}

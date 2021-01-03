@@ -1,0 +1,45 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block content %}
+    <style>
+       .otree-body { text-align : center;}
+       .otree-btn-next {
+            display: none;
+            }
+       .otree-timer {
+            display: none;
+            }
+    </style>
+    <br>
+    <br>
+    <h1>
+        다음 게임으로 넘어갑니다.
+    </h1>
+    <br>
+    <br>
+    <br>
+    <p1>
+        이번에는 <b>공공재게임</b>으로 넘어갑니다.
+        <br>
+        공공재게임을 함께할 조원 3명을 고르고 있으니 기다려주시길 바랍니다.
+        <br>
+        시간은 약 30초 소요됩니다.
+        <br>
+    </p1>
+        <br>
+
+    <script>
+        $(function () {
+            $('.otree-timer__time-left').on('update.countdown', function (event) {
+                if (event.offset.totalSeconds === 2) {
+                    $('.otree-btn-next').show();
+                }
+            });
+        });
+    </script>
+
+    <button class="otree-btn-next btn btn-primary">
+        다음으로
+    </button>
+{% endblock %}
